@@ -16,9 +16,9 @@ namespace Examen
         {
             return N1 + N2 + N3;
         }
-        public double CalcularNotaFinal(int N1, int N2, int N3)
+        public double CalcularNotaFinal(double Nota1, double Nota2, double Nota3)
         {
-            return N1 + N2 + N3;
+            return Nota1 + Nota2 + Nota3;
         }
 
         public string MensajeNotaFinal(double notaFinal)
@@ -40,6 +40,7 @@ namespace Examen
             double notaFinal = CalcularNotaFinal();
             double notaFinalParametros = CalcularNotaFinal(N1, N2, N3);
 
+            Console.WriteLine("**************************************************");
             Console.WriteLine($"Nombre del alumno: {NombreAlumno}");
             Console.WriteLine($"Numero de cuenta: {NumeroCuenta}");
             Console.WriteLine($"Correo Electronico: {Email}");
@@ -49,8 +50,9 @@ namespace Examen
             Console.WriteLine($"Nota 1er parcial: {N1}");
             Console.WriteLine($"Nota 2do parcial: {N2}");
             Console.WriteLine($"Nota 3er parcial: {N3}");
-            Console.WriteLine($"Nota Final con el Metodo sin parametros es: {notaFinal}  - {MensajeNotaFinal}");
-            Console.WriteLine($"Nota Final con el Metodo Con parametros es: {notaFinalParametros}  - {MensajeNotaFinal}");
+            Console.WriteLine($"Nota Final con el Metodo sin parametros es: {notaFinal}  - {MensajeNotaFinal(notaFinal)}");
+            Console.WriteLine($"Nota Final con el Metodo Con parametros es: {notaFinalParametros}  - {MensajeNotaFinal(notaFinalParametros)}");
+            Console.WriteLine("**************************************************");
         }
 
 
