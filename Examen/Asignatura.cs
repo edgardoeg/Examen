@@ -16,9 +16,9 @@ namespace Examen
         {
             return N1 + N2 + N3;
         }
-        public double CalcularNotaFinal(double Nota1, double Nota2, double Nota3)
+        public double CalcularNotaFinal(int N1, int N2, int N3)
         {
-            return Nota1 + Nota2 + Nota3;
+            return N1 + N2 + N3;
         }
 
         public string MensajeNotaFinal(double notaFinal)
@@ -32,16 +32,25 @@ namespace Examen
             else if (notaFinal >= 90 && notaFinal <= 100)
                 return "Sobresaliente";
             else
-                return "Nota Invalida";
+                return "Nota ingresada Invalida";
         }
 
         public void Imprimir() 
         {
-            Console.WriteLine($"Ingrese nombre del alumno: {NombreAlumno}");
-            Console.WriteLine($"Ingrese numero de cuenta: {NumeroCuenta}");
-            Console.WriteLine($"Ingrese Correo Electronico: {Email}");
-            Console.WriteLine($"Ingrese nombre de la clase: {NombreAsignatura}");
-            Console.WriteLine($"Ingrese Horario de la clase: {Horario}");
+            double notaFinal = CalcularNotaFinal();
+            double notaFinalParametros = CalcularNotaFinal(N1, N2, N3);
+
+            Console.WriteLine($"Nombre del alumno: {NombreAlumno}");
+            Console.WriteLine($"Numero de cuenta: {NumeroCuenta}");
+            Console.WriteLine($"Correo Electronico: {Email}");
+            Console.WriteLine($"Nombre de la clase: {NombreAsignatura}");
+            Console.WriteLine($"Horario de la clase: {Horario}");
+            Console.WriteLine($"Nombre del Docente: {NombreDocente}");
+            Console.WriteLine($"Nota 1er parcial: {N1}");
+            Console.WriteLine($"Nota 2do parcial: {N2}");
+            Console.WriteLine($"Nota 3er parcial: {N3}");
+            Console.WriteLine($"Nota Final con el Metodo sin parametros es: {notaFinal}  - {MensajeNotaFinal}");
+            Console.WriteLine($"Nota Final con el Metodo Con parametros es: {notaFinalParametros}  - {MensajeNotaFinal}");
         }
 
 
